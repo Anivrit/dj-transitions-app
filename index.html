@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Transitions Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 DJ Transitions Tracker</h1>
+            <p>Track your best song transitions and discover the longest chains</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Add Transition Section -->
+            <section class="add-transition">
+                <h2>Add New Transition</h2>
+                <div class="transition-form">
+                    <div class="form-group">
+                        <label for="from-song">From Song:</label>
+                        <input type="text" id="from-song" placeholder="Artist - Song Title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="to-song">To Song:</label>
+                        <input type="text" id="to-song" placeholder="Artist - Song Title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="transition-notes">Notes (optional):</label>
+                        <textarea id="transition-notes" placeholder="Why does this transition work well?"></textarea>
+                    </div>
+                    <button type="button" id="add-transition-btn" class="btn btn-primary">Add Transition</button>
+                </div>
+            </section>
+
+            <!-- Song Selection Section -->
+            <section class="song-selection">
+                <h2>Find Longest Chain</h2>
+                <div class="select-song">
+                    <label for="song-select">Select a song to start from:</label>
+                    <select id="song-select">
+                        <option value="">Choose a song...</option>
+                    </select>
+                    <button type="button" id="find-chain-btn" class="btn btn-secondary">Find Longest Chain</button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results" id="results-section" style="display: none;">
+                <h2>Longest Chain Found</h2>
+                <div class="chain-display" id="chain-display">
+                    <!-- Chain will be displayed here -->
+                </div>
+                <div class="chain-info">
+                    <p>Chain length: <span id="chain-length">0</span> songs</p>
+                    <p>Total duration: <span id="chain-duration">0:00</span></p>
+                </div>
+            </section>
+
+            <!-- Graph Visualization -->
+            <section class="graph-section">
+                <h2>Transition Graph</h2>
+                <div class="graph-controls">
+                    <button type="button" id="show-graph-btn" class="btn btn-secondary">Show/Hide Graph</button>
+                    <button type="button" id="clear-graph-btn" class="btn btn-danger">Clear All Data</button>
+                </div>
+                <div class="graph-container" id="graph-container" style="display: none;">
+                    <canvas id="graph-canvas" width="800" height="600"></canvas>
+                </div>
+            </section>
+
+            <!-- Transitions List -->
+            <section class="transitions-list">
+                <h2>All Transitions</h2>
+                <div class="transitions-container" id="transitions-container">
+                    <!-- Transitions will be listed here -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

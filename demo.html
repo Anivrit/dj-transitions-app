@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Transitions Demo</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .demo-transitions {
+            text-align: left;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        .transition-item {
+            background: rgba(255,255,255,0.1);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #48bb78;
+        }
+        .btn {
+            background: #48bb78;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 10px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🎵 DJ Transitions Demo</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">
+            This demo shows some example transitions you can try in the main application.
+        </p>
+        
+        <div class="demo-transitions">
+            <h3>Example Transitions to Try:</h3>
+            
+            <div class="transition-item">
+                <strong>Daft Punk - Around the World</strong> → <strong>Justice - Genesis</strong>
+                <br><em>Both have similar electronic grooves and energy levels</em>
+            </div>
+            
+            <div class="transition-item">
+                <strong>Justice - Genesis</strong> → <strong>Gesaffelstein - Pursuit</strong>
+                <br><em>Dark, industrial electronic music with heavy bass</em>
+            </div>
+            
+            <div class="transition-item">
+                <strong>Gesaffelstein - Pursuit</strong> → <strong>SebastiAn - Motor</strong>
+                <br><em>French electro with driving rhythms and distorted synths</em>
+            </div>
+            
+            <div class="transition-item">
+                <strong>SebastiAn - Motor</strong> → <strong>Mr. Oizo - Flat Beat</strong>
+                <br><em>Quirky, funky electronic with memorable hooks</em>
+            </div>
+            
+            <div class="transition-item">
+                <strong>Mr. Oizo - Flat Beat</strong> → <strong>Aphex Twin - Windowlicker</strong>
+                <br><em>Experimental electronic with complex rhythms</em>
+            </div>
+            
+            <div class="transition-item">
+                <strong>Aphex Twin - Windowlicker</strong> → <strong>Squarepusher - My Red Hot Car</strong>
+                <br><em>IDM with intricate drum programming</em>
+            </div>
+        </div>
+        
+        <div style="margin: 30px 0;">
+            <a href="index.html" class="btn">🚀 Launch Main App</a>
+            <a href="README.md" class="btn btn-secondary">📖 Read Documentation</a>
+        </div>
+        
+        <div style="margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+            <h4>💡 Pro Tip:</h4>
+            <p>Try adding these transitions in the main app, then use the "Find Longest Chain" feature starting from "Daft Punk - Around the World" to discover a 7-song chain!</p>
+        </div>
+    </div>
+</body>
+</html> 
