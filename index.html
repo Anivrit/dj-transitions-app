@@ -20,13 +20,39 @@
                 <h2>Add New Transition</h2>
                 <div class="transition-form">
                     <div class="form-group">
-                        <label for="from-song">From Song:</label>
-                        <input type="text" id="from-song" placeholder="Artist - Song Title" required>
+                        <label for="input-mode">Input Mode:</label>
+                        <select id="input-mode" class="input-mode-select">
+                            <option value="manual">Manual Entry</option>
+                            <option value="soundcloud">SoundCloud Links</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label for="to-song">To Song:</label>
-                        <input type="text" id="to-song" placeholder="Artist - Song Title" required>
+                    
+                    <!-- Manual Input Fields -->
+                    <div id="manual-inputs">
+                        <div class="form-group">
+                            <label for="from-song">From Song:</label>
+                            <input type="text" id="from-song" placeholder="Artist - Song Title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="to-song">To Song:</label>
+                            <input type="text" id="to-song" placeholder="Artist - Song Title" required>
+                        </div>
                     </div>
+                    
+                    <!-- SoundCloud Input Fields -->
+                    <div id="soundcloud-inputs" style="display: none;">
+                        <div class="form-group">
+                            <label for="from-song-url">From Song (SoundCloud URL):</label>
+                            <input type="url" id="from-song-url" placeholder="https://soundcloud.com/artist/song-title" required>
+                            <div class="song-preview" id="from-song-preview"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="to-song-url">To Song (SoundCloud URL):</label>
+                            <input type="url" id="to-song-url" placeholder="https://soundcloud.com/artist/song-title" required>
+                            <div class="song-preview" id="to-song-preview"></div>
+                        </div>
+                    </div>
+                    
                     <div class="form-group">
                         <label for="transition-notes">Notes (optional):</label>
                         <textarea id="transition-notes" placeholder="Why does this transition work well?"></textarea>
@@ -39,10 +65,11 @@
             <section class="song-selection">
                 <h2>Find Longest Chain</h2>
                 <div class="select-song">
-                    <label for="song-select">Select a song to start from:</label>
-                    <select id="song-select">
-                        <option value="">Choose a song...</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="song-search">Search for a song to start from:</label>
+                        <input type="text" id="song-search" placeholder="Type artist name or song title..." autocomplete="off">
+                        <div class="search-results" id="search-results"></div>
+                    </div>
                     <button type="button" id="find-chain-btn" class="btn btn-secondary">Find Longest Chain</button>
                 </div>
             </section>
